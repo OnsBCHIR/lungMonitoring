@@ -1,35 +1,40 @@
 
- function threed(){
-   alert("hello mother fuckers !!")
-   Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
+function threeD(){
+  const CSV =
+    "https://raw.githubusercontent.com/chris3edwards3/exampledata/master/plotlyJS/3d.csv";
+
+Plotly.d3.csv(CSV, function(err, rows){
     function unpack(rows, key) {
-      return rows.map(function(row) { return row[key]; });
+        return rows.map(function(row) { return row[key]; });
     }
-      
-    var z_data=[ ]
-    for(i=0;i<24;i++)
-    {
-      z_data.push(unpack(rows,i));
+
+    let z_data=[];
+
+    let i = 0;
+    while (i < 21) {
+        z_data.push(unpack(rows, i));
+        i += 1;
     }
-    
-    var data = [{
-               z: z_data,
-               type: 'surface'
-            }];
-      
-    var layout = {
-      title: 'Mt Bruno Elevation',
-      autosize: false,
-      width: 500,
-      height: 500,
-      margin: {
-        l: 65,
-        r: 50,
-        b: 65,
-        t: 90,
-      }
+
+    let data = [{
+        z: z_data,
+        type: 'surface',
+        // colorscale: "YIGnBu" //https://plot.ly/javascript/colorscales/
+    }];
+
+    let layout = {
+        title: 'Example 3D Surface',
+        autosize: false,
+        height: 600,
+        width: 700,
+        margin: {
+            l: 65,
+            r: 50,
+            b: 65,
+            t: 30,
+        }
     };
-    Plotly.newPlot('myDiv', data, layout);
-    });
+
+    Plotly.newPlot('plot', data, layout);
+});
  }
-          
