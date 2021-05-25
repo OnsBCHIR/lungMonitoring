@@ -2,32 +2,32 @@
 import {Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {ThreedService} from 'src/app/service/threed.service';
 // import * as Plotlyjs from 'plotly.js/dist/plotly';
-import { take } from 'rxjs/operators';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import "../../../assets/js/three.min.js";
-import "../../../assets/js/STLLoader.js";
-import "../../../assets/js/stats.min.js";
-import "../../../assets/js/dat.gui.min.js";
+//import { take } from 'rxjs/operators';
+//import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+//import "../../../assets/js/three.min.js";
+//import "../../../assets/js/STLLoader.js";
+//import "../../../assets/js/stats.min.js";
+//import "../../../assets/js/dat.gui.min.js";
 
-import "../../../assets/js/lung.js";
-declare var f3: any;
-declare var stloader : any;
-declare var stat : any;
-declare var datgui : any;
-declare var renderLung: any;
-declare var gui: any;
+//import "../../../assets/js/lung.js";
+//declare var f3: any;
+//declare var stloader : any;
+//declare var stat : any;
+//declare var datgui : any;
+//declare var renderLung: any;
+//declare var gui: any;
 
 @Component({
   selector: "app-notifications",
   templateUrl: "notifications.component.html"
 })
-export class NotificationsComponent implements OnInit, OnDestroy {
+export class NotificationsComponent implements OnInit{
 
 
-@ViewChild('chart',{static: true}) chart : ElementRef ;
-@ViewChild('lungDiv',{static: true})  lungDiv: ElementRef;
+//@ViewChild('chart',{static: true}) chart : ElementRef ;
+//@ViewChild('lungDiv',{static: true})  lungDiv: ElementRef;
 
-constructor(public db : AngularFireDatabase, private renderer2: Renderer2, private el:ElementRef) {
+constructor() {
 
 
   }
@@ -35,11 +35,11 @@ constructor(public db : AngularFireDatabase, private renderer2: Renderer2, priva
 
   ngOnInit() {
    // this.db.list("data").valueChanges().subscribe((value: any) => this.topoChart(value));
-   new f3();
-   new stloader();
-   new stat();
-   new datgui();
-    new renderLung();
+ //  new f3();
+  // new stloader();
+  // new stat();
+ //  new datgui();
+  //  new renderLung();
 
   }
 
@@ -47,11 +47,11 @@ constructor(public db : AngularFireDatabase, private renderer2: Renderer2, priva
 
  }
 
-  ngOnDestroy(): void {
-  console.log("kljlk");
-  gui.destroy();
+//  ngOnDestroy(): void {
+ // console.log("kljlk");
+//  gui.destroy();
 
-  }
+//  }
 /*  topoChart(data){
     console.log(data);
     const element = this.el.nativeElement

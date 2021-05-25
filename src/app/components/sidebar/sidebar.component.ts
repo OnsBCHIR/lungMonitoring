@@ -8,42 +8,43 @@ declare interface RouteInfo {
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  {
-    path: "/dashboard",
-    title: "Dashboard",
-    rtlTitle: "لوحة القيادة",
-    icon: "icon-chart-pie-36",
-    class: ""
-  },
+
   {
     path: "/icons",
-    title: "Ventilation",
+    title: "Agenda",
     rtlTitle: "الرموز",
-    icon: "icon-chart-bar-32",
+    icon: "icon-paper",
     class: ""
   },
   {
     path: "/maps",
-    title: "PEEP titration",
-    rtlTitle: "خرائط",
-    icon: "icon-sound-wave",
+    title: "My profile",
+    rtlTitle: "",
+    icon: "icon-badge",
     class: "" },
   {
     path: "/notifications",
-    title: "Perfusion",
-    rtlTitle: "إخطارات",
-    icon: "icon-molecule-40",
+    title: "List of Patients",
+    rtlTitle: "",
+    icon: "icon-align-left-2",
     class: ""
   },
 
 
   {
     path: "/tables",
-    title: "Table List",
-    rtlTitle: "قائمة الجدول",
-    icon: "icon-notes",
+    title: "Patient Details",
+    rtlTitle: "",
+    icon: "icon-single-02",
     class: ""
-  }
+  },
+  {
+    path: "/dashboard",
+    title: "Online consultation",
+    rtlTitle: "",
+    icon: "icon-chat-33",
+    class: ""
+  },
  
 
 ];

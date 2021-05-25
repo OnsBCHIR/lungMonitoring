@@ -1,30 +1,46 @@
-import { Component, OnInit ,ViewChild,ElementRef} from "@angular/core";
-import * as Plotly from 'plotly.js';
+import { Component, OnInit} from "@angular/core";
+
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import "src/app/pages/tables/threed.js";
+import "node_modules/plotly.js";
+declare var  threeD: any;
 @Component({
   selector: "app-tables",
-  templateUrl: "tables.component.html"
+  templateUrl: "tables.component.html",
+  providers: [NgbCarouselConfig] 
 })
 export class TablesComponent implements OnInit {
-  @ViewChild('chart',{static: true}) el :ElementRef;
 
-  constructor() {}
+  images = [
+    'assets/img/first.png',
+    'assets/img/second.png',
+    'assets/img/third.png'
 
-  ngOnInit() {
-    this.basicChart()
-   
+  ];
+
+  constructor(config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+    config.interval = 180;
+    config.keyboard = true;
+    config.pauseOnHover = false;
+    config.showNavigationArrows = false;
+    config.showNavigationIndicators = false;
   }
-  basicChart(){
-    const element = this.el.nativeElement
-    const data = [{
-      x:[1,2,3,4,5],
-      y:[1,2,4,8,16]
-    }]
-    const style ={
 
-      margin: {t:0}
-    }
-    Plotly.plot(element,data,style)
+
+
+  ngOnInit(): void {
+    new threeD();
+
+    
+
+
+
   }
+
+
+  
+
  
 
 }

@@ -317,7 +317,7 @@ export class DashboardComponent implements OnInit {
     gradientStroke.addColorStop(0, 'rgba(233,32,16,0)'); //red colors
 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['0.7', '0.8', '0.9', '1.0', '1.1', '1.2'],
       datasets: [{
         label: "Data",
         fill: true,
@@ -355,7 +355,7 @@ export class DashboardComponent implements OnInit {
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+      labels: ['20:24:00', '20:25:00', '20:26:00', '20:27:00', '20:28:00'],
       datasets: [{
         label: "My First dataset",
         fill: true,
@@ -384,7 +384,7 @@ export class DashboardComponent implements OnInit {
 
 
 
-    var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    var chart_labels = ['1.6', '2', '3.8', '0.4', '5', '0.6', '2.7', '0.8', '3.9', '0.9', '1.1', '1.2'];
     this.datasets = [
       [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
       [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
@@ -401,7 +401,7 @@ export class DashboardComponent implements OnInit {
 
     gradientStroke.addColorStop(1, 'rgba(233,32,16,0.2)');
     gradientStroke.addColorStop(0.4, 'rgba(233,32,16,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(233,32,16,0)'); //red colors
+    gradientStroke.addColorStop(0, 'rgba(128,128,128,1)'); //red colors
 
     var config = {
       type: 'line',
@@ -446,7 +446,7 @@ export class DashboardComponent implements OnInit {
         display: false
       },
       data: {
-        labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+        labels: ['0.4', '0.5', '0.6', '0.7', '0.8', '0.9'],
         datasets: [{
           label: "Countries",
           fill: true,
@@ -456,7 +456,7 @@ export class DashboardComponent implements OnInit {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [53, 20, 10, 80, 100, 45],
+          data: [50, 40, 70, 90, 38, 46],
         }]
       },
       options: gradientBarChartConfiguration

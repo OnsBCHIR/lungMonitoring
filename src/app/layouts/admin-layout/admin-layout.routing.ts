@@ -7,7 +7,10 @@ import { NotificationsComponent } from "../../pages/notifications/notifications.
 import { UserComponent } from "../../pages/user/user.component";
 import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
-// import { RtlComponent } from "../../pages/rtl/rtl.component";
+
+import{RegisterComponent} from "../../register/register.component";
+ import { RtlComponent } from "../../pages/rtl/rtl.component";
+import {LoginComponent} from "../../login/login.component";
 
 export const AdminLayoutRoutes: Routes = [
   { path: "dashboard", component: DashboardComponent },
@@ -17,5 +20,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "user", component: UserComponent },
   { path: "tables", component: TablesComponent },
   { path: "typography", component: TypographyComponent },
-  // { path: "rtl", component: RtlComponent }
+ { path: "register", component: RegisterComponent },
+ {path:'login',component:LoginComponent},
+ { path: "rtl", component: RtlComponent }
 ];

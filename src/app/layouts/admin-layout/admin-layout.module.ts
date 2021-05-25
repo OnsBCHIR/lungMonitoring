@@ -14,6 +14,13 @@ import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
+
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ChartModule } from 'angular-highcharts';
 import{AngularFireDatabase, AngularFireDatabaseModule} from '@angular/fire/database';
@@ -32,7 +39,14 @@ import { AngularFireModule } from '@angular/fire';
     NgbModule,
     ChartModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+  
+    NgbModalModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
   declarations: [
     DashboardComponent,

@@ -28,13 +28,21 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/scss/black-dashboard.scss",
-              "src/assets/css/nucleo-icons.css"
+              "src/assets/css/nucleo-icons.css",
+              "./node_modules/uikit/dist/css/uikit.min.css",
+              "./node_modules/uikit/dist/css/uikit-core.min.css",
+              "./node_modules/angular-calendar/css/angular-calendar.css"
             ],
             "scripts": [  "node_modules/jquery/dist/jquery.min.js",
-              "src/app/pages/map/threed.js"
+              "./node_modules/uikit/dist/js/uikit.min.js",
+         "./node_modules/uikit/dist/js/uikit-icons.min.js",
+         "src/app/pages/tables/threed.js"
+         
+             
                           
             
             ]
@@ -91,7 +99,10 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "./node_modules/angular-calendar/css/angular-calendar.css"
+              
             ],
             "scripts": [],
             "assets": [

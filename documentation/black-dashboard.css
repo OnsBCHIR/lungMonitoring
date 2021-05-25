@@ -2485,7 +2485,7 @@ fieldset:disabled a.btn {
   color: #ffffff;
   background-color: #1d8cf8;
   border-color: #1d8cf8;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(216, 216, 233, 0.863), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .btn-info:hover {
@@ -10900,8 +10900,8 @@ fieldset[disabled] .btn-success.active {
 }
 
 .btn-success.btn-simple {
-  color: #00f2c3;
-  border-color: #00f2c3;
+  color: #067037a2;
+  border-color: #145245;
   background: transparent;
 }
 
@@ -11025,7 +11025,7 @@ fieldset[disabled] .btn-info.active {
 }
 
 .btn-info.btn-simple {
-  color: #1d8cf8;
+  color: #4ea4fa;
   border-color: #1d8cf8;
   background: transparent;
 }
@@ -17254,7 +17254,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card {
-  background: #27293d;
+  background: #ffffff;
   border: 0;
   position: relative;
   width: 100%;
